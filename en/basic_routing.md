@@ -11,6 +11,13 @@ Value, once bound, can't be mutated during runtime.
 Now, let's restrict our WebPart, so that the "Hello World" response is sent only at the root path of our application (`localhost:8083/` but not `localhost:8083/anything`):
 `let webPart = path "/" >=> OK "Hello World"`
 `path` function is defined in `Suave.Filters` module, thus we need to open it at the beggining of `App.fs`. `Suave.Operators` and `Suave.Successful` modules will also be crucial - let's open them as well.
+Ensure these lines are at the top of your file:
+```fsharp
+open Suave                 // always open suave
+open Suave.Successful      // for OK-result
+open Suave.Filters         // for routing
+open Suave.Operators       // for operators
+
 
 `path` is a function of type:
 `string -> WebPart`
