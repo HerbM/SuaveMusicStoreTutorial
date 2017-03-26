@@ -6,6 +6,7 @@ With the `View.fs` file in place, let's add our first view:
 module SuaveMusicStore.View
 
 open Suave.Html
+open Suave.Xml  // may be required to build current version if missing: divAttr
 
 let divId id = divAttr ["id", id]
 let h1 xml = tag "h1" [] xml
