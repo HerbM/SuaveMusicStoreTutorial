@@ -25,4 +25,6 @@ pathScan "/store/details/%s/%d" (fun (a, id) -> OK (sprintf "Artist: %s; Id: %d"
 
 for request `http://localhost:8083/store/details/abba/1`
 
+(recent versions of Suave default to Port 8080 -- the port is displayed on the Suave banner when it starts)
+
 For more information on working with strings in a statically typed way, visit [this site](http://fsharpforfunandprofit.com/posts/printf/)
