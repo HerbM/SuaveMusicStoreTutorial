@@ -16,6 +16,8 @@ startWebServer defaultConfig (OK "Hello World!")
 
 Guess what, if you press F5 to run the project, your application is now up and running!
 By default it should be available under `http://localhost:8083`.
+(recent versions of Suave default to Port 8080 -- the port is displayed on the Suave banner when it starts)
+
 If you browse that url, you should be greeted with the classic `Hello World!`.
 The `open` statements at the top of the file are the same as `using` statements in C#.
 Note there is no `Main` method defined in `App.fs` - what happens here is that the `startWebServer` function is invoked immediately after the program is run and Suave starts listening for incoming request till the process is killed.
